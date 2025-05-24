@@ -6,7 +6,7 @@ def convert(A_str, P_str):
     P = int(P_str)
 
     if P <= 1:
-        return "Неможлива основа системи числення"
+        return
     if A == 0:
         return "0"
 
@@ -17,7 +17,7 @@ def convert(A_str, P_str):
         stack.append(remainder)
         A //= P
     result = []
-
+    
     while stack:
         digit = stack.pop()
         if digit < 10:
@@ -28,4 +28,5 @@ def convert(A_str, P_str):
     return ''.join(result)
 
 print(convert(A_input, P_input))
+
 
